@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.image.Image?>
+
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/11.0.1"
+            xmlns:fx="http://javafx.com/fxml/1"
+            fx:controller="com.kolesalite.controller.AuthController"
+            style="-fx-background-color: #f5f5f5;">
+
+    <ImageView fitHeight="60" fitWidth="180" preserveRatio="true" layoutX="20" layoutY="20">
+        <image>
+            <Image url="https://iitu.edu.kz/media/images/iitu.original.jpg" />
+        </image>
+    </ImageView>
+
+    <VBox alignment="CENTER" spacing="20" AnchorPane.topAnchor="50" AnchorPane.leftAnchor="150" AnchorPane.rightAnchor="150">
+        <Label text="KolesaLite" style="-fx-font-size: 28px; -fx-font-weight: bold; -fx-text-fill: #2196F3;"/>
+
+        <VBox spacing="15" style="-fx-padding: 20; -fx-background-color: white; -fx-border-color: #ddd; -fx-border-radius: 5;">
+            <Label text="Вход в систему" style="-fx-font-size: 18px; -fx-font-weight: bold;"/>
+
+            <TextField fx:id="loginEmailField" promptText="Введите email" prefWidth="250.0"/>
+            <PasswordField fx:id="loginPasswordField" promptText="Введите пароль" prefWidth="250.0"/>
+
+            <Label fx:id="loginErrorLabel" style="-fx-text-fill: red; -fx-font-size: 12px;" prefWidth="250.0"/>
+
+            <Button text="Войти" onAction="#handleLogin" defaultButton="true"
+                    style="-fx-background-color: #2196F3; -fx-text-fill: white; -fx-font-weight: bold; -fx-font-size: 14px;"
+                    prefWidth="250.0" prefHeight="35"/>
+        </VBox>
+
+        <Label text="PROJECT FOR SESSIONS FROM :YERNAR,DAMIR,ALIBEK" style="-fx-font-size: 14px; -fx-text-fill: #666;"/>
+        <VBox spacing="5" style="-fx-padding: 10; -fx-background-color: #e8f5e8; -fx-border-color: #4CAF50;">
+            <Label text="• admin@gmail.com / 123 (Ernar)" style="-fx-font-size: 12px;"/>
+            <Label text="• user@mail.com / 1234 (Damir)" style="-fx-font-size: 12px;"/>
+            <Label text="• test@gmail.com / test (Тестовый)" style="-fx-font-size: 12px;"/>
+        </VBox>
+    </VBox>
+</AnchorPane>

@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<VBox alignment="TOP_CENTER" spacing="20" prefHeight="700.0" prefWidth="800.0"
+      xmlns="http://javafx.com/javafx/11.0.1"
+      xmlns:fx="http://javafx.com/fxml/1"
+      fx:controller="com.kolesalite.controller.ProfileController"
+      style="-fx-padding: 30;">
+
+    <Label text="Профиль пользователя" style="-fx-font-size: 24px; -fx-font-weight: bold;"/>
+
+    <VBox spacing="10" style="-fx-padding: 20; -fx-background-color: #f5f5f5; -fx-border-color: #ddd;">
+        <Label fx:id="usernameLabel" style="-fx-font-size: 16px;"/>
+        <Label fx:id="emailLabel" style="-fx-font-size: 16px;"/>
+        <Label fx:id="balanceLabel" style="-fx-font-size: 16px; -fx-text-fill: #4CAF50; -fx-font-weight: bold;"/>
+    </VBox>
+
+    <HBox spacing="40">
+        <VBox spacing="10">
+            <Label fx:id="favoritesCountLabel" style="-fx-font-size: 16px; -fx-font-weight: bold;"/>
+            <ScrollPane fitToWidth="true" prefHeight="250">
+                <VBox fx:id="favoritesContainer" spacing="5" style="-fx-padding: 10;"/>
+            </ScrollPane>
+        </VBox>
+
+        <VBox spacing="10">
+            <Label fx:id="purchasedCountLabel" style="-fx-font-size: 16px; -fx-font-weight: bold; -fx-text-fill: #4CAF50;"/>
+            <ScrollPane fitToWidth="true" prefHeight="250">
+                <VBox fx:id="purchasedContainer" spacing="5" style="-fx-padding: 10;"/>
+            </ScrollPane>
+        </VBox>
+    </HBox>
+
+    <Button text="Назад" onAction="#handleBack"
+            style="-fx-background-color: #9E9E9E; -fx-text-fill: white;" prefWidth="100"/>
+</VBox>
